@@ -7,7 +7,7 @@ A Rust-based terminal chat client that uses the OpenRouter.ai API to interact wi
 - **Terminal-based Interface**: Clean and simple command-line interface
 - **Chat History**: Maintains context across conversations
 - **Markdown Formatting**:
-  - `### Headings` displayed in bold green
+  - `### Headings` displayed in bold
   - `**bold text**` displayed in bold
 - **Easy Context Management**: Clear chat history with simple commands
 
@@ -35,8 +35,19 @@ cargo build --release
 3. Set up your API key:
 
 ```bash
+mkdir ~/.config/tchat
+touch ~/.config/tchat/config
 echo "export OPENROUTER_API_KEY=your_api_key_here" > ~/.config/tchat/config
-source ~/.config/tchat/config
+```
+
+4. Add config file to .bashrc or .zshrc (for constant import)
+
+```bash
+echo source ~/.config/tchat/config >> ~/.bashrc
+```
+
+```zsh
+echo source ~/.config/tchat/config >> ~/.zshrc
 ```
 
 ### Usage
